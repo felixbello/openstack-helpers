@@ -41,11 +41,11 @@ echo "done."
 
 # Create Instances R1 & R2
 echo -e "--> Creating Instance R1...\c"
-nova boot --flavor c1.medium --image ae13a837-4c1d-4f8a-a716-021e33a8bdbf --key-name generic_keypair R1 > $LOG_PATH/R1.log
+nova boot --security-groups default,SSH_INGRESS --flavor c1.medium --image ae13a837-4c1d-4f8a-a716-021e33a8bdbf --key-name generic_keypair R1 > $LOG_PATH/R1.log
 echo "done."
 
 echo -e "--> Creating Instance R2...\c"
-nova boot --flavor c1.medium --image ae13a837-4c1d-4f8a-a716-021e33a8bdbf --key-name generic_keypair R2 > $LOG_PATH/R2.log
+nova boot --security-groups default,SSH_INGRESS --flavor c1.medium --image ae13a837-4c1d-4f8a-a716-021e33a8bdbf --key-name generic_keypair R2 > $LOG_PATH/R2.log
 echo "done."
 
 # Create Networks
