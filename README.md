@@ -1,6 +1,5 @@
 # Openstack Helpers
 
-## Description
 This is a small collection of Shell-Scripts to help with creating and removing Open Stack Environments. 
 
 ## Preparations
@@ -33,10 +32,9 @@ This removes all items in reverse order of the previously mentioned `create` com
 There is also a simple removal script that will remove ALL instances, networks, subnets and ports there are on your OpenStack Server. Use with caution!
 ```bash
 $ ./oshelper-erase-all.sh
+```
 
-
-Disclaimer
-==========
+### Disclaimer
 Using these scripts is at your own risk. I do not take any responsibility for any effects or damages that could arise from using the scripts!
 
 
