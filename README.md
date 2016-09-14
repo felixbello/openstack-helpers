@@ -34,7 +34,7 @@ There is also a simple removal script that will remove ALL instances, networks, 
 $ ./oshelper-erase-all.sh
 ```
 
-### Disclaimer
+## Disclaimer
 Using these scripts is at your own risk. I do not take any responsibility for any effects or damages that could arise from using the scripts!
 
 
