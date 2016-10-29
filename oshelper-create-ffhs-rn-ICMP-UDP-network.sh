@@ -60,11 +60,11 @@ neutron net-create --port_security_enabled=False --router:external=False NetB >>
 echo "done."
 
 # Create Ports
-echo -e "--> Creating Ports NetA_Port_R1 on NetA, NetB_Port_R1 on NetB, NetB_Port_R2 on NetB, NetC_Port_R2 on NetC and NetD_Port_R2 on NetD...\c"
-neutron port-create --name NetA_Port_A --fixed-ip 192.168.0.2 NetA > $PORT_PATH
-neutron port-create --name NetB_Port_B --fixed-ip 172.16.0.2 NetB >> $PORT_PATH
-neutron port-create --name NetA_Port_R1 --fixed-ip 192.168.0.1 NetA >> $PORT_PATH
-neutron port-create --name NetB_Port_R1 --fixed-ip 172.16.0.1 NetB >> $PORT_PATH
+echo -e "--> Creating Ports NetA_Port_R1 on NetA, NetB_Port_R1 on NetB, NetA_Port_A on NetA, NetB_Port_B on NetB...\c"
+neutron port-create --name NetA_Port_A NetA > $PORT_PATH
+neutron port-create --name NetB_Port_B NetB >> $PORT_PATH
+neutron port-create --name NetA_Port_R1 NetA >> $PORT_PATH
+neutron port-create --name NetB_Port_R1 NetB >> $PORT_PATH
 echo "done."
 
 # Attach Ports to Instances

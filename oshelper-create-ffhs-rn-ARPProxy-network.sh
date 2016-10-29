@@ -73,7 +73,7 @@ echo "done."
 echo -e "--> Creating Subnets NetA_Sub1, NetB_Sub1, NetC_Sub1 and NetD_Sub1...\c"
 neutron subnet-create --name NetA_Sub1 --no-gateway --disable-dhcp NetA 192.168.0.0/24 > $SUBNET_PATH
 neutron subnet-create --name NetB_Sub1 --no-gateway --disable-dhcp NetB 172.10.20.128/25 >> $SUBNET_PATH
-neutron subnet-create --name NetC_Sub1 --no-gateway --disable-dhcp NetC 172.10.21.128/25 >> $SUBNET_PATH
+neutron subnet-create --name NetC_Sub1 --no-gateway --disable-dhcp NetC 172.10.20.128/25 >> $SUBNET_PATH
 neutron subnet-create --name NetD_Sub1 --no-gateway --disable-dhcp NetD 172.10.21.0/25 >> $SUBNET_PATH
 echo "done."
 
@@ -82,12 +82,12 @@ echo -e "--> Creating Ports NetA_Port_R1 on NetA, NetB_Port_R1 on NetB, NetB_Por
 neutron port-create --name NetA_Port_INTERNET --fixed-ip subnet_id=NetA_Sub1,ip_address=192.168.0.250 NetA > $PORT_PATH
 neutron port-create --name NetB_Port_INTERNET --fixed-ip subnet_id=NetB_Sub1,ip_address=172.10.20.129 NetB >> $PORT_PATH
 neutron port-create --name NetB_Port_ARP_PROXY --fixed-ip subnet_id=NetB_Sub1,ip_address=172.10.20.200 NetB >> $PORT_PATH
-neutron port-create --name NetC_Port_ARP_PROXY --fixed-ip subnet_id=NetC_Sub1,ip_address=172.10.21.200 NetC >> $PORT_PATH
+neutron port-create --name NetC_Port_ARP_PROXY --fixed-ip subnet_id=NetC_Sub1,ip_address=172.10.20.200 NetC >> $PORT_PATH
 neutron port-create --name NetD_Port_ARP_PROXY NetD >> $PORT_PATH
 
 neutron port-create --name NetA_Port_H1_NetA --fixed-ip subnet_id=NetA_Sub1,ip_address=192.168.0.251 NetA > $PORT_PATH
 neutron port-create --name NetB_Port_H2_NetB --fixed-ip subnet_id=NetB_Sub1,ip_address=172.10.20.201 NetB >> $PORT_PATH
-neutron port-create --name NetC_Port_H3_NetC --fixed-ip subnet_id=NetC_Sub1,ip_address=172.10.21.202 NetC >> $PORT_PATH
+neutron port-create --name NetC_Port_H3_NetC --fixed-ip subnet_id=NetC_Sub1,ip_address=172.10.20.202 NetC >> $PORT_PATH
 
 echo "done."
 
